@@ -1,1 +1,1 @@
-rootProject.name = "learn-kotlin"
+rootProject.name = "math-eww"

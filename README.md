@@ -1,2 +1,2 @@
-## FizzBuzz Game with Kotlin
-Game to test your coding skill with Kotlin programing language
+## Math Eww
+Program to perform calculations with formulas.
