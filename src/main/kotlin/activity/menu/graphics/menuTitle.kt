@@ -1,4 +1,4 @@
-package activity.graphics
+package activity.menu.graphics
 
 val menuTitle = """
 !Main menu Command:

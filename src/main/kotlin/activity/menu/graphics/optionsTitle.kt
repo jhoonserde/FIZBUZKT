@@ -1,4 +1,4 @@
-package activity.graphics
+package activity.menu.graphics
 
 val titleOptions = """
 !Options menu Command:

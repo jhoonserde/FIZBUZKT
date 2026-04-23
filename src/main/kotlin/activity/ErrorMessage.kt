@@ -7,7 +7,7 @@ class ErrorMessage(val errorObject: Any) {
     fun errorMessage(): String {
         return when (errorObject) {
 
-            is MenuCommandInput -> "Unknown command: ${errorObject.input}"
+            is MenuCommandInput -> "Unknown command: ${errorObject.inputCommand}"
 
             else -> "Program is corrupt, you have reinstall this program"
         }

@@ -1,10 +1,9 @@
 package activity.menu.tui
 
-import activity.graphics.mathEwwAscii
-import activity.graphics.menuTitle
-import activity.graphics.titleHelpMenu
-import activity.graphics.titleOptions
-import kotlin.properties.Delegates
+import activity.menu.graphics.mathEwwAscii
+import activity.menu.graphics.menuTitle
+import activity.menu.graphics.titleHelpMenu
+import activity.menu.graphics.titleOptions
 
 open class TuiManager {
 
@@ -15,15 +14,12 @@ open class TuiManager {
         println(mathEwwAscii)
     }
 
-    var lastIdMenu: Int = 0
-
     fun selectedMenu(idMenu: Int) {
         when (idMenu) {
             0 -> println(menuTitle)
             1 -> println(titleOptions)
             2 -> println(titleHelpMenu)
         }
-        lastIdMenu = idMenu
     }
 
     fun clearScreen() {
