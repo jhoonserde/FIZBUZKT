@@ -1,14 +1,25 @@
 package activity.menu.input
 
+import activity.menu.input.command.ExecCommand
+
 class Input {
 
-    var stopReadInput = true
+    private val readInput: String = readlnOrNull() ?: ""
+
+    private val tokenCommand = readInput.split(" ")
+
+    var isRead: Boolean = true
 
     fun readerInput() {
         do {
             print(">> ")
-            val readerInput = MenuCommandInput(readln())
-            readerInput.executeCommand(this)
-        } while (stopReadInput)
+            val input = Input()
+            input.readInput
+            val execCommand = ExecCommand(
+                tokenCommand = input.tokenCommand,
+                inputObject = this
+            )
+            execCommand.executeCommand()
+        } while (isRead)
     }
 }

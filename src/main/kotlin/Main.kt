@@ -5,9 +5,9 @@ fun main() {
 
     val tuiManager = TuiManager()
 
-    val input = Input()
-
     tuiManager.selectedMenu(0)
+
+    val input = Input()
 
     input.readerInput()
 }

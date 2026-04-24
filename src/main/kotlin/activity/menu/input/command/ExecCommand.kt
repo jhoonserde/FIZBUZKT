@@ -1,22 +1,26 @@
-package activity.menu.input
+package activity.menu.input.command
 
 import activity.ErrorMessage
+import activity.menu.input.Input
 import activity.menu.tui.TuiManager
 
-class MenuCommandInput(val inputCommand: String) : TuiManager() {
+class ExecCommand(
+    val tokenCommand: List<String>,
+    val inputObject: Input
+) {
 
     val tui = TuiManager()
 
-    fun executeCommand(input: Input) {
+    fun executeCommand() {
         //check is input blank
-        when (inputCommand) {
+        when (tokenCommand[0]) {
 
             MenuCommand.OPTIONS.nameMenu -> tui.selectedMenu(1)
 
             MenuCommand.HELP.nameMenu -> tui.selectedMenu(2)
 
             MenuCommand.EXIT.nameMenu -> {
-                input.stopReadInput = false
+                inputObject.isRead = false
                 println ("Exit")
             }
 

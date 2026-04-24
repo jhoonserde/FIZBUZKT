@@ -1,13 +1,13 @@
 package activity
 
-import activity.menu.input.MenuCommandInput
+import activity.menu.input.command.ExecCommand
 
 class ErrorMessage(val errorObject: Any) {
 
     fun errorMessage(): String {
         return when (errorObject) {
 
-            is MenuCommandInput -> "Unknown command: ${errorObject.inputCommand}"
+            is ExecCommand -> "Unknown command: ${errorObject.tokenCommand[0]}"
 
             else -> "Program is corrupt, you have reinstall this program"
         }

@@ -1,4 +1,4 @@
-package activity.menu.input
+package activity.menu.input.command
 
 enum class MenuCommand(val nameMenu: String) {
 

@@ -5,7 +5,7 @@ import activity.menu.graphics.menuTitle
 import activity.menu.graphics.titleHelpMenu
 import activity.menu.graphics.titleOptions
 
-open class TuiManager {
+class TuiManager {
 
     init {
 
