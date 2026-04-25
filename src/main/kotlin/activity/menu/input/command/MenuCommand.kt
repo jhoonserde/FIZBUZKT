@@ -1,11 +1,13 @@
 package activity.menu.input.command
 
-enum class MenuCommand(val nameMenu: String) {
+enum class MenuCommand(val command: String) {
 
     OPTIONS( "options"),
 
     HELP("help"),
 
-    EXIT("exit");
+    EXIT("exit"),
+
+    EMPTY_INPUT("")
 
 }

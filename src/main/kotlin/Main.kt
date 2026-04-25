@@ -1,4 +1,5 @@
 import activity.menu.input.Input
+import activity.menu.input.command.ExecCommand
 import activity.menu.tui.TuiManager
 
 fun main() {
@@ -7,7 +8,13 @@ fun main() {
 
     tuiManager.selectedMenu(0)
 
-    val input = Input()
-
-    input.readerInput()
+    do {
+        print(">> ")
+        val input = Input()
+        val execCommand = ExecCommand(
+            tokenCommand = input.tokenCommand,
+            inputObject = input
+        )
+        execCommand.executeCommand()
+    } while (input.isRead)
 }

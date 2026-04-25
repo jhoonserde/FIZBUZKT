@@ -5,7 +5,9 @@ import activity.menu.input.Input
 import activity.menu.tui.TuiManager
 
 class ExecCommand(
+
     val tokenCommand: List<String>,
+
     val inputObject: Input
 ) {
 
@@ -15,11 +17,13 @@ class ExecCommand(
         //check is input blank
         when (tokenCommand[0]) {
 
-            MenuCommand.OPTIONS.nameMenu -> tui.selectedMenu(1)
+            MenuCommand.OPTIONS.command -> tui.selectedMenu(1)
 
-            MenuCommand.HELP.nameMenu -> tui.selectedMenu(2)
+            MenuCommand.HELP.command -> tui.selectedMenu(2)
 
-            MenuCommand.EXIT.nameMenu -> {
+            MenuCommand.EMPTY_INPUT.command -> tui.selectedMenu(0)
+
+            MenuCommand.EXIT.command -> {
                 inputObject.isRead = false
                 println ("Exit")
             }
