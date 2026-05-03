@@ -1,20 +1,14 @@
 package activity.calculation.formula.areaAndPerimeterOfShapes
 
-class Square(val side: Int?) : AreaAndPerimeterOfShapes() {
+import activity.calculation.ValueType
 
-    fun countArea(): Any {
-        return when {
-            side != null -> side * side
-            else -> "area"
-        }
-    }
+class Square(val side: ValueType<*>) : AreaAndPerimeterOfShapes() {
 
-    fun countPerimeter(): Any {
-        return when {
-            side != null -> 4 * side
-            else -> "perimeter"
-        }
-    }
+    private val sideSquare = ValueType(value = 4)
+
+    fun countArea(): Number? = side * side
+
+    fun countPerimeter(): Number? = side * sideSquare
 
     fun getFormula(): String {
         return """
